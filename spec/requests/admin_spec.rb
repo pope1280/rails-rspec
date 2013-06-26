@@ -8,7 +8,7 @@ describe 'Admin' do
     it "can edit a post by clicking the edit link next to a post"
     it "can delete a post by clicking the delete link next to a post"
     
-    #get this test working before any others. study up on integration testing and capybara/cucumber
+    #study up on integration testing and capybara/cucumber
     it "can create a new post and view it", :js => true do
        visit new_admin_post_path
 
