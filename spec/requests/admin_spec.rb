@@ -3,10 +3,14 @@ require 'spec_helper'
 describe 'Admin' do
   context "on admin homepage" do
     it "can see a list of recent posts"
+
+    
     it "can edit a post by clicking the edit link next to a post"
     it "can delete a post by clicking the delete link next to a post"
-    it "can create a new post and view it" do
-       visit new_admin_post_url
+    
+    #get this test working before any others. study up on integration testing and capybara/cucumber
+    it "can create a new post and view it", :js => true do
+       visit new_admin_post_path
 
        expect {
          fill_in 'post_title',   with: "Hello world!"
